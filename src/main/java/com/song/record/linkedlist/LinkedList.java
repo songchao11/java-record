@@ -270,5 +270,32 @@ public class LinkedList<T> {
         return true;
     }
 
+    /**
+     * 打印链表内元素
+     */
+    public void display() {
+        if (size > 0) {
+            Node node = first;
+            int tempSize = size;
+            if (tempSize == 1) {//当前链表只有一个节点
+                System.out.println("[" + node.item + "]");
+                return;
+            }
+            while (tempSize > 0) {
+                if (node.equals(first)) {
+                    System.out.print("[" + node.item + "->");
+                } else if (node.next == null) {
+                    System.out.print(node.item + "]");
+                } else {
+                    System.out.print(node.item + "->");
+                }
+                node = node.next;
+                tempSize--;
+            }
+            System.out.println();
+        } else {//如果链表一个节点都没有，直接打印[]
+            System.out.println("[]");
+        }
+    }
 
 }

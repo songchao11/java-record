@@ -17,26 +17,13 @@ public class Test {
         list.add("FFF");
         list.add("AWE");
         list.add("OPT");
-//		list.linkFirst("AAA");
+		list.linkFirst("first");
 //		list.linkFirst("BBB");
-        for(int i = 0;i < list.size();i++){
-            System.out.print(list.get(i)+"\t");
-        }
-        System.out.println();
-        list.remove("WW");
-        for(int i = 0;i < list.size();i++){
-            System.out.print(list.get(i)+"\t");
-        }
-        System.out.println();
+        list.display();
+        list.remove("FFF");
+        list.display();
         list.add(2, "XX");
-        for(int i = 0;i < list.size();i++){
-            System.out.print(list.get(i)+"\t");
-        }
-        System.out.println();
-        list.set(33, "OO");
-        for(int i = 0;i < list.size();i++){
-            System.out.print(list.get(i)+"\t");
-        }
+        list.display();
     }
 
 }
